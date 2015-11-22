@@ -1,0 +1,11 @@
+c:\users\bodiver\documents\visual studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\2courOOP KR.exe.config
+c:\users\bodiver\documents\visual studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\2courOOP KR.exe
+c:\users\bodiver\documents\visual studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\2courOOP KR.pdb
+c:\users\bodiver\documents\visual studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\2courOOP KR.csprojResolveAssemblyReference.cache
+c:\users\bodiver\documents\visual studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\_2courOOP_KR.Form1.resources
+c:\users\bodiver\documents\visual studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\_2courOOP_KR.Properties.Resources.resources
+c:\users\bodiver\documents\visual studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\2courOOP KR.csproj.GenerateResource.Cache
+c:\users\bodiver\documents\visual studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\2courOOP KR.exe
+c:\users\bodiver\documents\visual studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\2courOOP KR.pdb
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\_2courOOP_KR.CreateRequest.resources
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\_2courOOP_KR.Report.resources
