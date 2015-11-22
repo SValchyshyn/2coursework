@@ -30,9 +30,9 @@ namespace _2courOOP_KR
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var _name = name_txt.Text.ToString();
-            var _ammount = int.Parse(ammount_txt.Text.ToString());
-            var _date= DateTime.Parse(date_txt.Text.ToString());
+            var _name = name_txt.Text;
+            var _ammount = int.Parse(ammount_txt.Text);
+            var _date = DateTime.Parse(date_txt.Text);
             name.Add(_name);
             ammount.Add(_ammount);
             date.Add(_date);
