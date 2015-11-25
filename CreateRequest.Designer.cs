@@ -122,6 +122,7 @@
             this.Controls.Add(this.name_txt);
             this.Name = "CreateRequest";
             this.Text = "CreateRequest";
+            this.Load += new System.EventHandler(this.CreateRequest_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -72,5 +72,10 @@ namespace _2courOOP_KR
             bformatter.Serialize(stream, req);
             return stream;
         }
+
+        private void CreateRequest_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
