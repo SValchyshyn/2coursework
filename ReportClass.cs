@@ -5,25 +5,25 @@ using System.Runtime.Serialization;
 namespace _2courOOP_KR
 {
     [Serializable()]
-    public class Request:ISerializable
+    public class ReportClass
     {
         public List<Goods> GoodsList { get; set; }
 
-        public Request()
+        public ReportClass()
         {
-            GoodsList=new List<Goods>();
+            GoodsList = new List<Goods>();
 
         }
 
-        public Request(SerializationInfo info, StreamingContext ctxt)
+        public ReportClass(SerializationInfo info, StreamingContext ctxt)
         {
             //Get the values from info and assign them to the appropriate properties
-            GoodsList = (List<Goods>) info.GetValue("GoodsList", typeof(List<Goods>));
+            GoodsList = (List<Goods>)info.GetValue("GoodsList", typeof(List<Goods>));
         }
 
-        public Request(List<Goods> goodsList)
+        public ReportClass(List<Goods> goodsList)
         {
-            GoodsList=goodsList;
+            GoodsList = goodsList;
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext ctxt)
@@ -36,7 +36,12 @@ namespace _2courOOP_KR
 
         public void Add(string name, int ammount, DateTime date)
         {
-            GoodsList.Add(new Goods(name,  ammount, date));
+            GoodsList.Add(new Goods(name, ammount, date));
+        }
+
+        public void AddRange(List<Goods> goods )
+        {
+            GoodsList.AddRange(goods);
         }
 
         public DateTime GetDate()

@@ -1,20 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _2courOOP_KR
 {
     public partial class Form1 : Form
     {
+        List<string> pathesWithoutExt = new List<string>();
+        List<string> goods = new List<string>();
+        string[] paths = FilePaths.GetRepPath();
+
         public Form1()
         {
             InitializeComponent();
@@ -23,32 +19,13 @@ namespace _2courOOP_KR
         private void button1_Click(object sender, EventArgs e)
         {
             CreateRequest createRequest=new CreateRequest();
-            createRequest.Show();
-            //string[] name=new string[] {"sad","ball", "hong"};
-            //int[] ammount = new[] {10, 25, 36};
-            //DateTime[] date=new DateTime[] {new DateTime(2015,12,16), new DateTime(2015, 12, 18), new DateTime(2015, 12, 19) };
-            //Request req = new Request(name,ammount,date );
-            //Stream stream = File.Open("RequestInfo.osl", FileMode.Create);
-            //BinaryFormatter bformatter = new BinaryFormatter();
+            createRequest.Show(); 
+        }
 
-            //Console.WriteLine("Writing Employee Information");
-            //Console.WriteLine(req.Ammount.GetValue(1));
-            //Console.WriteLine(req.Date.GetValue(1));
-            //Console.WriteLine(req.Name.GetValue(1));
-
-            //bformatter.Serialize(stream, req);
-            //stream.Close();
-            //Request req = null;
-
-            //Stream stream = File.Open("RequestInfo.osl", FileMode.Open);
-            //bformatter = new BinaryFormatter();
-
-            //Console.WriteLine("Reading Employee Information");
-            //req = (Request)bformatter.Deserialize(stream);
-            //stream.Close();
-
-            //Console.WriteLine("Employee Id: {0}", req.Ammount.ToString());
-            //Console.WriteLine("Employee Name: {0}", req.Name);
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Report report=new Report();
+            report.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -59,12 +36,69 @@ namespace _2courOOP_KR
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            foreach (var path in paths)
+            {
+                pathesWithoutExt.Add(Path.GetFileNameWithoutExtension(path));
+            }
+            FillListBox1();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void FillListBox1()
         {
-            Report report=new Report();
-            report.Show();
+            listBox1.DataSource = pathesWithoutExt;
+            listBox2.DataSource = goods;
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillLixtBox2();
+        }
+
+        private void FillLixtBox2()
+        {
+            var selected = listBox1.SelectedIndex;
+            var CurRep = RequestSerializer.DeserializeRep(paths[selected]);
+            listBox2.DataSource = null;
+            goods.Clear();
+            foreach (Goods VARIABLE in CurRep.GoodsList)
+            {
+                goods.Add(VARIABLE.GetGoods());
+            }
+            listBox2.DataSource = goods;
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var selectedRep = listBox1.SelectedIndex;
+            var selectedGoods = listBox2.SelectedIndex;
+            var path = paths[listBox1.SelectedIndex];
+            ReportClass report = RequestSerializer.DeserializeRep(paths[selectedRep]);
+            report.GoodsList.RemoveAt(selectedGoods);
+            File.Delete(paths[selectedRep]);
+            RequestSerializer.ReplaceReportFile(path,report);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FillListBox1();
+            FillLixtBox2();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            File.Delete(paths[listBox1.SelectedIndex]);
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

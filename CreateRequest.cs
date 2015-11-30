@@ -1,23 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _2courOOP_KR
 {
     public partial class CreateRequest : Form
     {
-        List<string> name = new List<string>();
-        List<int> ammount = new List<int>();
-        List<DateTime> date = new List<DateTime>();
+        Request req=new Request();
         public CreateRequest()
         {
             InitializeComponent();
@@ -30,12 +18,7 @@ namespace _2courOOP_KR
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var _name = name_txt.Text;
-            var _ammount = int.Parse(ammount_txt.Text);
-            var _date = DateTime.Parse(date_txt.Text);
-            name.Add(_name);
-            ammount.Add(_ammount);
-            date.Add(_date);
+            req.Add(name_txt.Text,int.Parse((ammount_txt.Text)),DateTime.Parse(date_txt.Text));
             name_txt.Clear();
             ammount_txt.Clear();
             date_txt.Clear();
@@ -44,33 +27,11 @@ namespace _2courOOP_KR
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Stream stream = CreateRequestFile();
-            foreach (var VARIABLE in name)
+            foreach (var VARIABLE in req.GoodsList)
             {
-                Console.WriteLine(VARIABLE);
+                Console.WriteLine(VARIABLE.Name+'\n'+VARIABLE.Ammount+'\n'+VARIABLE.Date);
             }
-            foreach (var VARIABLE in ammount)
-            {
-                Console.WriteLine(VARIABLE);
-            }
-            foreach (var VARIABLE in date)
-            {
-                Console.WriteLine(VARIABLE);
-            }
-            name.Clear();
-            ammount.Clear();
-            date.Clear();
-            stream.Close();
-        }
-
-        private Stream CreateRequestFile()
-        {
-            Request req = new Request(name, ammount, date);
-            date.Sort((x, y) => y.CompareTo(x));
-            Stream stream = File.Open($"Request({date[0]:yyyy-MM-dd}).osl", FileMode.Create);
-            BinaryFormatter bformatter = new BinaryFormatter();
-            bformatter.Serialize(stream, req);
-            return stream;
+            RequestSerializer.CreateRequestFile(req);
         }
 
         private void CreateRequest_Load(object sender, EventArgs e)
