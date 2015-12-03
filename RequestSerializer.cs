@@ -8,8 +8,33 @@ namespace _2courOOP_KR
 {
     public class RequestSerializer
     {
+        public Request Request
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
+        public ReportClass ReportClass
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public static void CreateRequestFile(Request req)
         {
+
                 Stream stream = File.Open($"Request({req.GetDate():yyyy-MM-dd}).osl", FileMode.Create);
                 BinaryFormatter bformatter = new BinaryFormatter();
                 bformatter.Serialize(stream, req);
@@ -73,7 +98,6 @@ namespace _2courOOP_KR
             quarterFiles.Sort((x, y) => y.Item2.CompareTo(x.Item2));
             DateTime compareTime = quarterFiles[0].Item2;
             request = RequestSerializer.Deserialize(quarterFiles[0].Item1);
-            File.Delete(quarterFiles[0].Item1);
             report.AddRange(request.GoodsList);
             for (int i = 1; i < quarterFiles.Count; i++)
             {
@@ -81,7 +105,6 @@ namespace _2courOOP_KR
                 {
                     request = null;
                     request = RequestSerializer.Deserialize(quarterFiles[i].Item1);
-                    File.Delete(quarterFiles[i].Item1);
                     report.AddRange(request.GoodsList);
                 }
                 else
@@ -90,11 +113,14 @@ namespace _2courOOP_KR
                     report.GoodsList.Clear();
                     compareTime = quarterFiles[i].Item2;
                     request = RequestSerializer.Deserialize(quarterFiles[i].Item1);
-                    File.Delete(quarterFiles[i].Item1);
                     report.AddRange(request.GoodsList);
                 }
             }
             RequestSerializer.CreateReportFile(report, q);
+            for (int i = 0; i < quarterFiles.Count; i++)
+            {
+                File.Delete(quarterFiles[i].Item1);
+            }
         }
     }
 }

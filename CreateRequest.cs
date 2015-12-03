@@ -32,6 +32,8 @@ namespace _2courOOP_KR
                 Console.WriteLine(VARIABLE.Name+'\n'+VARIABLE.Ammount+'\n'+VARIABLE.Date);
             }
             RequestSerializer.CreateRequestFile(req);
+            req.GoodsList.Clear();
+            MessageBox.Show("Заяву успішно створено");
         }
 
         private void CreateRequest_Load(object sender, EventArgs e)

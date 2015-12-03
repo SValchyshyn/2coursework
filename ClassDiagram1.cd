@@ -1,40 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="&lt;&lt;static&gt;&gt;">
+    <Position X="6.165" Y="5.97" Height="0.35" Width="0.818" />
+  </Comment>
   <Class Name="_2courOOP_KR.Goods">
-    <Position X="0.75" Y="0.5" Width="1.5" />
+    <Position X="7.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAAAAAAAAAQAAAAAAAEBAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAQAAAAAgAEBAAAAAAACAAA=</HashCode>
       <FileName>Goods.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Request" />
+      <Property Name="ReportClass" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="_2courOOP_KR.Request">
-    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Position X="4.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAIEAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Request.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Orientation="Left" Position="0.1" />
   </Class>
   <Class Name="_2courOOP_KR.ReportClass">
-    <Position X="4.25" Y="0.5" Width="1.5" />
+    <Position X="9.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAIEAAAAAAAAAAAAgAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>ReportClass.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_2courOOP_KR.RequestSerializer">
-    <Position X="6" Y="0.5" Width="1.75" />
+    <Position X="7.25" Y="4.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQAAAAACAEAEAABAAAAAAAAAAACAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAQAAAAACAEAEAABAgAAAAAAAAACCAAA=</HashCode>
       <FileName>RequestSerializer.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="_2courOOP_KR.FilePaths">
-    <Position X="8" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAACAEAAAAAAAAAAIAA=</HashCode>
-      <FileName>FilePaths.cs</FileName>
-    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Request" />
+      <Property Name="ReportClass" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

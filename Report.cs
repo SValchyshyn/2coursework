@@ -15,22 +15,26 @@ namespace _2courOOP_KR
         private void button1_Click(object sender, EventArgs e)
         {
             RequestSerializer.MakeReport(1,3,1);
+            MessageBox.Show("Звіт за І квартал успішно створено");
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            RequestSerializer.MakeReport(4, 6, 1);
+            RequestSerializer.MakeReport(4, 6, 2);
+            MessageBox.Show("Звіт за ІІ квартал успішно створено");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            RequestSerializer.MakeReport(6, 9, 1);
+            RequestSerializer.MakeReport(6, 9, 3);
+            MessageBox.Show("Звіт за ІІІ квартал успішно створено");
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            RequestSerializer.MakeReport(9, 12, 1);
+            RequestSerializer.MakeReport(9, 12, 4);
+            MessageBox.Show("Звіт за ІV квартал успішно створено");
         }
 
         private void Report_Load(object sender, EventArgs e)

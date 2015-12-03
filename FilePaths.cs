@@ -6,6 +6,7 @@ namespace _2courOOP_KR
     {
         private static string[] filePaths;
         private static string[] repFilePaths;
+
         public static  string[] GetPath()
         {
          filePaths =

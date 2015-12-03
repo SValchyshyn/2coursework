@@ -9,3 +9,14 @@ c:\users\bodiver\documents\visual studio 2015\Projects\2courOOP KR\2courOOP KR\o
 c:\users\bodiver\documents\visual studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\2courOOP KR.pdb
 C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\_2courOOP_KR.CreateRequest.resources
 C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\_2courOOP_KR.Report.resources
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\XAct.Core.PCL.dll
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\XAct.Diagnostics.Uml.dll
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\XAct.Diagrams.Uml.PlantUml.dll
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Bodiver\Documents\Visual Studio 2015\Projects\2courOOP KR\2courOOP KR\obj\Debug\2courOOP KR.csproj.App.config

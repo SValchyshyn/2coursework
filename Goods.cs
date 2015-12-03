@@ -11,6 +11,30 @@ namespace _2courOOP_KR
 
         public DateTime Date { get; set; }
 
+        public Request Request
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
+        public ReportClass ReportClass
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public Goods()
         {
             Name = "";
